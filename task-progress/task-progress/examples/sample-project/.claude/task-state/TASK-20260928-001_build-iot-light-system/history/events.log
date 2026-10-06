@@ -1,0 +1,20 @@
+2026-09-28T04:02:45+00:00	init	TASK-20260928-001	created 'Build IoT Light System'
+2026-09-28T04:02:45+00:00	checkpoint	checkpoint-001	session-A
+2026-09-28T04:02:45+00:00	file	created	src/main.cpp
+2026-09-28T04:02:45+00:00	file	created	src/relay.cpp
+2026-09-28T04:02:45+00:00	file	important	src/main.cpp
+2026-09-28T04:02:45+00:00	file	important	platformio.ini
+2026-09-28T04:02:45+00:00	decision	D-001	Use Firebase Realtime Database
+2026-09-28T04:02:45+00:00	test	T-001	firmware builds — PASS
+2026-09-28T04:02:45+00:00	test	T-002	WiFi reconnects after AP reboot — PASS
+2026-09-28T04:02:45+00:00	failed	F-001	Upload on COM3 while monitor open
+2026-09-28T04:02:45+00:00	blocker	B-001	Firebase rules reject writes
+2026-09-28T04:02:45+00:00	next	-	Flash firmware and test relaySet() on GPIO26 locally (no Firebase needed), verify active-HIGH assumption
+2026-09-28T04:02:45+00:00	checkpoint	checkpoint-002	session-A
+2026-09-28T04:03:04+00:00	test	T-003	relay.cpp present in working tree — FAIL
+2026-09-28T04:03:04+00:00	file	modified	src/relay.cpp
+2026-09-28T04:03:04+00:00	test	T-004	firmware builds — PASS
+2026-09-28T04:03:04+00:00	test	T-005	relay GPIO26 toggles — PASS
+2026-09-28T04:03:04+00:00	next	-	Wait for user on B-001 (Firebase auth). Meanwhile: write Firebase stream listener in src/main.cpp calling relaySet()
+2026-09-28T04:03:17+00:00	test	T-006	relay.cpp present in working tree — PASS
+2026-09-28T04:03:17+00:00	checkpoint	checkpoint-003	session-B

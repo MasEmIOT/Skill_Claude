@@ -1,0 +1,9 @@
+# Next Steps — {{TASK_ID}}
+
+## NEXT IMMEDIATE ACTION
+
+{{NEXT_ACTION}}
+
+## SHORT TERM
+
+## LATER
